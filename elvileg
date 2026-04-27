@@ -1,0 +1,19 @@
+import random
+
+szamok = []
+for i in range(10):
+    szamok.append(random.randint(1, 100))
+
+kivonas = szamok[0]
+for szam in szamok[1:]:
+    kivonas -= szam
+
+szorzat = 1
+for szam in szamok:
+    szorzat *= szam
+
+osztas = szamok[0]
+for szam in szamok[1:]:
+    osztas /= szam
+
+print(sum(szamok), kivonas, szorzat, osztas)
